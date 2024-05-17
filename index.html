@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        form {
+            width: fit-content;
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            label {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+
+
+                input {
+                    padding: 6px 10px;
+                    border: 1px solid #c4c4c4;
+                    border-radius: 15px;
+
+
+                }
+
+                input::placeholder {
+                    color: #c4c4c4;
+                }
+
+                
+            }
+
+            .req {
+                span {
+                    color: blue;
+                }
+
+                input {
+                    border-color: blue;
+                }
+            }
+
+            .error {
+                position: relative;
+
+                span {
+                    color: red;
+                }
+
+                input {
+                    border-color: red;
+                }
+            }
+
+            .error::after {
+                content: "";
+                display: block;
+                width: 20px;
+                height: 20px;
+                background-image: url("./error.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                position: absolute;
+                right: -25px;
+                top: 50%;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>REGISTRATION</h1>
+    </center>
+
+    <form name="signin">
+        <label for="Name" class="req">
+            <span>name</span>
+            <input type="text" id="Name" placeholder="Name" name="Name">
+        </label>
+        <label for="Surname" class="req">
+            <span>surname</span>
+            <input type="text" id="Surname" placeholder="Surname" name="Surname">
+        </label>
+        <label for="Age" class="req">
+            <span>age</span>
+            <input type="text" id="Age" placeholder="Age" name="Age">
+        </label>
+        <label for="Email" class="req">
+            <span>email</span>
+            <input type="Email" id="Email" placeholder="Email" name="Email">
+        </label>
+        <label for="Phone" class="req">
+            <span>phone</span>
+            <input type="tel" id="Phone" placeholder="Phone" name="Phone">
+        </label>
+
+
+        <button>send</button>
+    </form>
+
+    <div class="photo">
+        <center>
+
+            <img id="preview" src="" alt="">
+        </center>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
